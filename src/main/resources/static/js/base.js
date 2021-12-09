@@ -13,11 +13,10 @@ $(document).ready(function () {
         let username = localStorage.getItem("username")
         $.ajax({
             type: "GET",
-            url: `/userProfile/${username}`,
+            url: `/userprofile/${username}`,
             contentType: 'application/json; charset=utf-8',
             data: {},
             success: function (response){
-                console.log(response)
                 let profile_name = response['nickname']
                 let username = response['username']
                 let profile_info = response['userContent']
@@ -48,23 +47,6 @@ function get_card() {
     $('#user-profile').toggleClass('border border-2');
 }
 
-function onClickCreateEvent() {
-    if (localStorage.getItem("mytoken") != null) {
-        window.location.href = "/events"
-    } else {
-        alert("로그인 후 생성해주세요 !!")
-        window.location.href = '/login';
-    }
-}
-
-function onClickCreateProfile() {
-    if (localStorage.getItem("mytoken") != null) {
-        window.location.href = "/profile/create"
-    } else {
-        alert("로그인 후 생성해주세요 !!")
-        window.location.href = '/login';
-    }
-}
 
 function logout() {
     localStorage.removeItem("token");

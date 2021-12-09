@@ -1,0 +1,8 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "065417961814.dkr.ecr.ap-northeast-2.amazonaws.com/maru",
+    "Update": "true"
+  },
+  "Ports": [ { "ContainerPort" : 8080} ]
+}
