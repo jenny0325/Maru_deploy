@@ -52,7 +52,6 @@ public class MeetService {
         return meetRepository.findAll(Sort.by(Sort.Direction.DESC, "modifiedAt"));
     }
 
-
     public Meet getMeet(Long id) {
         Meet meet = meetRepository.findById(id).orElseThrow(
                 () -> new NullPointerException("해당 아이디가 존재하지 않습니다.")
