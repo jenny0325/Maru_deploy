@@ -122,7 +122,6 @@ public class UserService {
         user.setUserContent(userProfileDto.getUserContent());
         user.setNickname(userProfileDto.getNickname());
 
-
         if (userProfileDto.getUserProfileImg() != null) {
             String userProfileImg = s3Uploader.upload(userProfileDto.getUserProfileImg(), "static");
             user.setUserProfileImg(userProfileImg);
