@@ -77,4 +77,5 @@ public class FrontController {
     public String getPageMeetUpload(){
         return "meets/meet_detail_upload";
     }
+
 }
