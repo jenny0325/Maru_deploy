@@ -44,7 +44,6 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
-
       # 7. ECR 로그인
       - name: Login to Amazon ECR
         id: login-ecr
